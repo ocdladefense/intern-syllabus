@@ -7,6 +7,11 @@ Work product has several uses: project management, commit messages, presentation
 # Evaluations and References
 Some hiring platforms relay heavily on accurate references and more subjective evaluations.  It is ineffective to provide future employers with references and evaluations based solely on lines of code, which do not provide enough information about an employees contribution to a project and team.  Instead, I rely substantially on three activities:
 
+0. Learning Objectives
+  * AI
+  * Refactoring principles
+  * HTTP
+
 1. Meeting contributions - ask questions (there are no stupid question) and be thoughtful about your tasks and problem solving.
 
 2. Git commit messages - Other than your code, your commit messages are the best record of your coding style and progress.  See more about how this is possible.
