@@ -4,7 +4,7 @@
     width: 250px;
 }
 </style>
-# OCDLA Web Developer Internship, Spring '24 Kickoff Meeting,
+# OCDLA Web Developer Internship, Spring '24 Kickoff Meeting
 Tuesday, April 2, 2024 &mdash; 10:00 am - 2:00 pm<br />
 Location: Virtual - [Zoom link](https://us02web.zoom.us/j/88966004606)
 
