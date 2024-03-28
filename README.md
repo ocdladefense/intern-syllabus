@@ -5,6 +5,14 @@ OCDLA Web Developer Internship
 
 ## Syllabus
 
+### Resources
+* Salesforce
+* GitHub
+* NPM
+* Postman
+* Slack
+* Zoom
+
 ### Week 0
 * What is programming?
   * Social aspect - Machines are at the service of humanity; the developer's job is to program machines to perform tasks to further human values.
