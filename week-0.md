@@ -5,7 +5,7 @@ Work product consists of both the end result (usually a code repository, for exa
 Work product has several uses: project management, commit messages, presentation, goals, evaluation; 
 
 # Evaluations and References
-Some hiring platforms relay heavily on accurate references and more subjective evaluations.  It is ineffective to provide future employers with references and evaluations based solely on lines of code, which do not provide enough information about an employees contribution to a project and team.  Instead, I rely substantially on three activities:
+Some hiring platforms relay heavily on accurate references and more subjective evaluations.  It is ineffective to provide future employers with references and evaluations based solely on lines of code, which do not provide enough information about an employee's contribution to a project and team.  Instead, I rely substantially on these activities:
 
 0. Learning Objectives
   * AI
