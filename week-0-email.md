@@ -9,7 +9,7 @@ Tuesday, April 2, 2024 &mdash; 10:00 am - 2:00 pm<br />
 Location: Virtual - [Zoom link](https://us02web.zoom.us/j/88966004606)
 
 ## Meeting description
-Welcome to the OCDLA Web Developer Internship.  I'm happy to have you assisting OCDLA with this term's web application projects.  We will use our first kickoff meeting to dive right into some coding best practices.  We'll want to see how these best practices influence the structure of some projects you've already completed; in turn, we want to demonstrate that our code is always a reflection of how we articulate the programming problem we are trying to solve. We'll use other meeting time to discuss additional programming principles, other philosophical approaches to development, internship requirements and then a crash course on Salesforce, Visualforce and Apex programming.  Some meeting prep tips and our (tentative) meeting agenda follow.
+Welcome to the OCDLA Web Developer Internship.  I'm happy to have you assisting OCDLA with this term's web application projects.  We will use our first kickoff meeting to dive right into some coding best practices.  We'll want to see how these best practices influence the structure of some projects you've already completed; in turn, we want to demonstrate that our code is always a reflection of how we articulate the programming problem we are trying to solve. We'll also use meeting time to discuss additional programming principles, other philosophical approaches to development, internship requirements and then a crash course on Salesforce, Visualforce and Apex programming.  Some meeting prep tips and our (tentative) meeting agenda follow.
 
 
 ## Meeting preparation
