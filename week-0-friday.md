@@ -6,13 +6,21 @@ OCDLA uses the popular Salesforce CRM to manage contacts, donors, products, and 
 ## Meeting preparation
 * Salesforce Visualforce reference manual
 * Salesforce Apex reference manual
+* Create NPM accounts/OCDLA Organization invitation
+* Access to Salesforce _Developer Org_ for JavaScript/Salesforce integrations
 
 ## Meeting agenda
 | Time | Activity
 | --- | ---
-| 3:30 pm - 4:30 pm | Hello World Visualforce app; creating and deploying Visualforce pages; custom controllers (Apex);
-| 4:30 pm - 5:00 pm | README files: name, description, code examples, version history; Code updates (Timer, Calculator, Course Info)
+| 3:30 pm - 3:45 pm | Hello World Visualforce app; creating and deploying Visualforce pages; custom controllers (Apex)
+| 3:45 pm - 4:30 pm | Local linking in Node (package.json); Upload initial packages to OCDLA's NPM account
+| 4:30 pm - 5:30 pm | Week 0 projects - versioning, features, branches, tags, README files
+| TBD | README files: name, description, code examples, version history; Code updates (Timer, Calculator, Course Info)
 | 5:00 pm - 5:30 pm | Commit messages, branching, versioning
+| 5:30 pm - 6:00 pm | Learning objectives
+
+## New Skills
+* NPM, package.json, Use [local development paths in dependencies](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#local-paths)
 
 
 ## Previous meeting notes
