@@ -1,7 +1,7 @@
 # OCDLA Web Developer Internship, Spring '24 Kickoff Week (Friday)
 
 ## Meeting description
-OCDLA uses the popular Salesforce CRM to manage contacts, donors, products, and orders from the organization's online store.  Knowing how these various records work together is essential to undersing OCDLA's business processes.  
+Continue refactoring our Week 0 projects into separate JavaScript modules.  Prepare to integrate your Week 0 projects using Salesforce Cloud integration.  OCDLA uses the popular Salesforce CRM to manage contacts, donors, products, and orders from the organization's online store.  Knowing how these various records work together is essential to understanding OCDLA's business processes.  
 
 ## Meeting preparation
 * Salesforce Visualforce reference manual
@@ -40,7 +40,7 @@ OCDLA uses the popular Salesforce CRM to manage contacts, donors, products, and 
 
 ### Course Info
 * Refactor the <code>FileFormater</code> class's methods using the "generic pattern", renaming it to <code>TxtFile</code>.
-* Add ```addContent()```, ```addHeading()```, ```addSubHeading()``` and other utility methods to faciliate the creation of a well-formatted text file.
+* Add ```addContent()```, ```addHeading()```, ```addSubHeading()``` and other utility methods to facilitate the creation of a well-formatted text file.
 
 ## Review
-Our goal is to make our code as expressive as possible, along the way adopting approaches that make our code easier to read, more meaningful and more concise.  We make use of Object-oriented programming techniques, separation of concerns and descriptive variable naming to faciliate expressive programming.
+Our goal is to make our code as expressive as possible, along the way adopting approaches that make our code easier to read, more meaningful and more concise.  We make use of Object-oriented programming techniques, separation of concerns and descriptive variable naming to facilitate expressive programming.
