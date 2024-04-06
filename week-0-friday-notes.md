@@ -35,14 +35,17 @@ A web-based GUI frontend built on top of @ocdla/timer and @ocdla/view.
 ```
 ### Related tasks
 * General refactor
-* <code>window.requestAnimationFrame()</code>
-* <code>window.cancelAnimationFrame()</code>
-* <code>indexStart.js</code> should be renamed to <code>Timer.js</code>
-* Define a single <code>Timer.render()</code> method that displays the timer display and controls.
-* Use JSX syntax to build the <code>Timer.render()</code> method.
-* Define a Timer constructor that takes a string like "5m30s"
-   * Which would initialize the Timer to 5 minutes and 30 seconds.
+* <code>indexStart.js</code> should be renamed to <code>Timer.js</code> and imported per our Friday meeting.
+* Define a single <code>Timer.render()</code> method that generates a formatted representation of the Timer's state.
+  * The chief job of this function is to take a number of seconds and convert it to HH:mm:ss format.
+* _Use JSX syntax to build the <code>Timer.render()</code> method. (we will go over this Tuesday)_
+* Define a Timer constructor that takes a string like "5m 30s"
+   * Which would initialize the Timer to 5 minutes and 30 seconds, or (5 * 60)+30 = 330 s.
 ```javascript
+// Note this class actually works:
+// let cd = new Timer(10);
+// cd.start();
+// cd.stop();
 
 class Timer {
 
