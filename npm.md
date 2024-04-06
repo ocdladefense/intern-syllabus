@@ -9,7 +9,7 @@ The example, below, is for a package in <code>./dev_modules/@ocdla/txtfile</code
 2. Create an appropriately-named folder in <code>@ocdla</code>.
 3. Create a minimal <code>package.json</code> (see the example, below).
 4. Move any relevant JavaScript functions or class files into your new folder.
-5. In your base repository, use [local development paths as dependencies](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#local-paths).
+5. In your base repository's <code>package.json</code> file, use [local development paths as dependencies](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#local-paths).
 6. Run <code>npm update</code> to link the development code as a NPM package.
 7. Troubleshoot.
 8. Login to NPM and publish the minor-version library package to OCDLA's NPM Organization.
