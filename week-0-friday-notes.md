@@ -88,7 +88,7 @@ class Timer {
         if (seconds === undefined) {
             clearInterval(this.interval);
             console.log(Timer.TIMER_FINISHED_SOUND);
-            // this.rener(0);
+            // this.render(0);
         } else {
             console.log(seconds);
             // this.render(seconds);
