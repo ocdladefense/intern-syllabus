@@ -15,9 +15,11 @@ We will use [Exposing Apex Classes as REST Web Services](https://developer.sales
 * Parse the JSON returned by the Salesforce REST endpoint.
 * Consume related objects in your app.
 
-## Authentication to Salesforce REST endpoints
+## Salesforce REST - authentication
 * Use the Salesforce CLI to get an authentication token ([documentation](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm)).
-* Use the authentication token (Access Token) and instance URL to make requests 
+* Use the authentication token (access token or session id) and instance URL to make requests.
+* [Distinguish between types of authentication tokens](https://salesforce.stackexchange.com/questions/18565/security-token-vs-session-id-vs-access-token#:~:text=Session%20ID%20values%20are%20valid,Refresh%20Token%20if%20granted%20permission.).
+* _I believe we will be using the access token_.
 
 
 ## Learning objectives
