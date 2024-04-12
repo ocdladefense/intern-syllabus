@@ -1,5 +1,20 @@
 
-# DRAFT todo list/agenda for Friday, Week 2
+# DRAFT Agenda for Friday, Week 2
+
+## Questions
+Any questions or comments on our previous work, especially local Node module development, git, JSX, babel/webpack.
+
+## 5-minute summaries
+Spend a few minutes and give the team updates on your work since Tuesday.
+
+## OOP, loose coupling and message passing.
+A discussion of some of these principles given our interest in MVC, encapsulation and separation of concerns.  An example from functional programming in JavaScript that links our controller classes and our view/components.
+
+## Package publishing and versioning
+Discussion of our respective package names, package management and versioning.  Distinguish between development cycle and release cycle and their respective toolsets.  README files, <code>example/</code> folders and version history.  How versioning and project management go hand-in-hand.
+
+## Next app steps (and next versions)
+Let's build our first Salesforce REST API to interact with our apps.
 
 ## Salesforce REST endpoints
 We will use [Exposing Apex Classes as REST Web Services](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_rest.htm) documentation to begin integrating our Week 0 JavaScript projects with our Salesforce _Developer_ cloud instances (not OCDLA Sandbox).  Initially we will develop an Apex class that can support GET requests to retrieve Salesforce records that we will have already created using the Salesforce GUI (web); but looking ahead we should also be able to submit POST requests to add new records to Salesforce directly from our JavaScript apps using JavaScript <code>Request</code> and <code>Response</code>. 
