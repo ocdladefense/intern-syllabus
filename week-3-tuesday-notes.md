@@ -64,7 +64,7 @@ tick() {
     // Our project only needs one callback;
     // But if others were added using onTick() they would also be
     // executed here and passed the current tick.
-    for (let i = 0; i < this.onTicks.length; i++) {
+    for (let i = 0; i < this.callbacks.length; i++) {
         this.callbacks[i](h,m,s);
     }
 }
