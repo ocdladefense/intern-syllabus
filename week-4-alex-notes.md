@@ -12,4 +12,7 @@
   * Add a screenshots/ folder; move relevant images there.
 
 ## Charlese - TODO list
-* 
+* Complete an OOP version of @ocdla/salesforce NPM package; especially SalesforceRestApi class.
+  * Pass Instance URL and access token values from index.js to the <code>SalesforeRestApi</code> constructor.
+    * This information should not be transpiled directly into <code>SalesforceRestApi</code>.
+
