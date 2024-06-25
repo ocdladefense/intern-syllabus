@@ -33,7 +33,7 @@ In the end, we will need these classes:
 * [News Aggregator](https://github.com/SullivanKE/JS233-TermProject-News/blob/Internship/src/js/News_v2.js)
 * [Prevent unnecessary network requests with the HTTP Cache](https://web.dev/articles/http-cache)
 * [HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) from [MDN](https://developer.mozilla.org/en-US/)
-
+* Discussion of stale and fresh cached items and [<code>If-Modified-Since</code>](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#if-modified-since)
 
 ### Example Code:
 Note that there is no need to interact with the <code>LocalStorageCache</code> directly.  The HTTP Client (e.g., <code>NewsClient</code> or <code>WeatherClient</code>) we build will interact with it.
