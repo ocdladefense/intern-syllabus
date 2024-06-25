@@ -28,6 +28,12 @@ In the end, we will need these classes:
 * <code>LocalStorageCache</code> - accesses the <code>localStorage</code> interface.
 * <code>LocalStorageResponse</code> - represents the <code>Response</code> object and has a <code>toString()</code> method to convert the object to a JSON string for storage.
 
+### Resources
+* "Overview of Cache Operation" in [Hypertext Transfer Protocol (HTTP/1.1): Caching](https://www.rfc-editor.org/rfc/rfc7234#section-2)
+* [News Aggregator](https://github.com/SullivanKE/JS233-TermProject-News/blob/Internship/src/js/News_v2.js)
+* [Prevent unnecessary network requests with the HTTP Cache](https://web.dev/articles/http-cache)
+* [HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) from [MDN](https://developer.mozilla.org/en-US/)
+
 
 ### Example Code:
 Note that there is no need to interact with the <code>LocalStorageCache</code> directly.  The HTTP Client (e.g., NewsClient or WeatherClient>) we build will interact with it.
