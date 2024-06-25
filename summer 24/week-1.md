@@ -36,7 +36,7 @@ In the end, we will need these classes:
 
 
 ### Example Code:
-Note that there is no need to interact with the <code>LocalStorageCache</code> directly.  The HTTP Client (e.g., NewsClient or WeatherClient>) we build will interact with it.
+Note that there is no need to interact with the <code>LocalStorageCache</code> directly.  The HTTP Client (e.g., <code>NewsClient</code> or <code>WeatherClient</code>) we build will interact with it.
 ```javascript
 
         function useOurHttpClientAndCache() {
