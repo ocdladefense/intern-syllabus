@@ -39,7 +39,7 @@ This code details a classic request/response lifecycle using a HTTP client.
             // store Responses in the cache for later use,
             // and return Responses already stored in the cache
             // that match() the Request.
-            let client = new NewsClient();
+            let client = new HttpClient();
             // client = new WeatherClient();
 
             // Client can retrieve anything from the LocalStorageCache

@@ -30,6 +30,7 @@ In the end, we will need these classes:
 
 ### Resources
 * "Overview of Cache Operation" in [Hypertext Transfer Protocol (HTTP/1.1): Caching](https://www.rfc-editor.org/rfc/rfc7234#section-2)
+* [Cache-Control HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) on MDN
 * [News Aggregator](https://github.com/SullivanKE/JS233-TermProject-News/blob/Internship/src/js/News_v2.js)
 * [Prevent unnecessary network requests with the HTTP Cache](https://web.dev/articles/http-cache)
 * [HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) from [MDN](https://developer.mozilla.org/en-US/)
@@ -63,18 +64,16 @@ Note that there is no need to interact with the <code>LocalStorageCache</code> d
             // store Responses in the cache for later use,
             // and return Responses already stored in the cache
             // that match() the Request.
-            let client = new NewsClient();
+            let client = new HttpClient();
             // client = new WeatherClient();
 
             // Client can retrieve anything from the LocalStorageCache
             // and return it as an HTTP Response.
-            let resp = await client.send(req);
+            let resp = client.send(req);
 
 
             // Do something with the response;
             // probably update the view.
-            resp.json().then(displaySomething);
-
-            
+            resp.then(resp => resp.json()).then(displaySomething);
         }
 ```
