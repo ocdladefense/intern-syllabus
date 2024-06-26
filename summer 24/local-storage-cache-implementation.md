@@ -142,7 +142,7 @@ class LocalStorageCache {
 
         let key = httpResp.method + httpResp.url; // might need to add additional params though :)
         
-        localStorage.setValue(key, resp.toJson());
+        localStorage.setValue(key, resp.toString());
     }
 
 
