@@ -1,6 +1,9 @@
 
 
-## General discussion
+## General outline for calling code.
+This code details a classic request/response lifecycle using a HTTP client.
+
+
 ```javascript
     class Controller {
 
@@ -41,23 +44,22 @@
 
             // Client can retrieve anything from the LocalStorageCache
             // and return it as an HTTP Response.
-            let resp = await client.send(req);
+            let resp = client.send(req);
 
 
             // Do something with the response;
             // probably update the view.
-            resp.json().then(displaySomething);
-
-            
+            resp.then(resp => resp.json()).then(displaySomething);
         }
 
     }
 ```
 
-# Local Storage
+## HTTP Client
+The HttpClient is responsible for sending the request and retrieving the response.  _Keep in mind the client can also use an alternate response; in this case it will check the cache for a fresh response and use that instead of going out to the network._
 
 ```javascript
-class NewsClient {
+class HttpClient {
 
     // Store cache responses for 15 minutes, at least.
     const TTL = 900;
@@ -66,28 +68,48 @@ class NewsClient {
 
     send(req) {
 
-        let respDate = new Date(resp.headers.get("Date"));
+        
+
+        let isState;
+
+        // We need to know what now is in order to get elapsed time.
+        
+
+        // Remember, get() needs to return a Response object.
+        // Do this through a toResponse() instance method on the LocalStorageResponse class.
+        let entry = LocalStorageCache.get(req);
+        
+        // This is the general algorithm for extracting the max-age from the Cache-Control header.
+        // Then subtract the respTime from nowTime and compare that to the max-age;
+        // If it's greater than the stored cache response is STALE;
+        // Otherwise, it's still FRESH.
+        let cachedDate = new Date(entry.headers.get("Date"));
+        let cachedTime = cachedDate.getTime() / 1000;
 
         let now = new Date();
-        let entry = LocalStorageCache.get(req);
-        let cachedTime = entry.getTime() / 1000;
         let nowTime = now.getTime() / 1000;
-        let stale = (nowTime - respTime) > cacheTTL;
 
+        let parts = entry.headers.get("Cache-Control").split(",").map(value => value.trim(););
+        let cacheControl = {};
+        for(var value of parts) {
+            let [k,v] = parts.split("=");
+            cacheControl[k] = v;
+        }
+        let maxAge = cacheControl["max-age"];
 
+        let stale = (nowTime - respTime) > maxAge;
 
-        if(stale) {
+        // If we have a fresh cache entry, then we should return that.
+        if(entry && !stale) {
 
             // get() should return a Response object.
-            return 
+            return Promise.resolve(entry);
         }
 
 
         return fetch(req).then(resp => {
-
-
-
             LocalStorageCache.put(req, resp);
+            return resp;
         });
 
     }
@@ -96,6 +118,7 @@ class NewsClient {
 
 
 ## LocalStorageCache.js
+The cache is responsible for putting items in the cache and retrieving them from the cache.
 
 ```javascript
 class LocalStorageCache {
@@ -108,17 +131,16 @@ class LocalStorageCache {
 
     static put(req, httpResp) {
 
-        let resp = new LocalStorageResponse(httpResp);
+        let resp = LocalStorageResponse.newFromResponse(httpResp);
 
         // Creates a HTTP Date header with the appropriately formatted value.
         // e.g., "Sat, 22 Jun 2024 07:17:43 GMT".
         resp.addHeader("Date", new Date().toUTCString());
 
         // 900 seconds is 15 mintues.
-        resp.addHeader("Cache-Control", "max-age=900");
+        resp.addHeader("Cache-Control", "public, max-age="+LocalStorageCache.TTL);
 
-        let key = req.url; // might need to add additional params though :)
-        let resp = LocalStorageResponse.newFromResponse(httpResp);
+        let key = httpResp.method + httpResp.url; // might need to add additional params though :)
         
         localStorage.setValue(key, resp.toJson());
     }
@@ -129,7 +151,9 @@ class LocalStorageCache {
 
         let json = localStorage.getValue(key);
 
-        return LocalStorageResponse.newFromJson(json);
+        let cachedResp = LocalStorageResponse.newFromJson(json);
+
+        return cachedResp.toResponse();
     }
 
 
@@ -151,22 +175,24 @@ class LocalStorageCache {
 ```
 
 
+## LocalStorageResponse
+LocalStorageResponse acts as a wrapper class to convert a JavaScript Response object to a string.
 
 ```javascript
 class LocalStorageResponse {
 
     headers = {};
 
-    #body = null;
+    body = null;
 
-    constructor(body) {
+    constructor(body, headers) {
         this.body = body;
+        this.headers = headers || this.headers;
     }
 
     addHeader(k, v) {
-        headers[k] = v;
+        this.headers[k] = v;
     }
-
 
     getHeaders() {
         return this.headers;
@@ -176,36 +202,43 @@ class LocalStorageResponse {
         return this.body;
     }
 
+
     toString() {
         return JSON.stringify(this);
     }
 
+    /*
+     Convert this object to a standard JavaScript Response object.
+    */
+    toResponse() {
+        return Response.json(this.body, {headers: this.headers});
+    }
 
+    // Convert stored JSON in the format '{"headers":{"h1":"h1","h2":"h2","h3":"h3"},"body":"{"prop1":"val1"}"}'.
+    static fromJson(cacheJson) {
 
+        let [headers,body] = JSON.parse(cacheJson);
 
+        return new LocalStorageResponse(body,headers);
+    }
+
+    // Convert an instance JavaScript Response to an instance of this class.
     static fromHttpResponse(httpResp) {
 
         let headers, body;
-        let date, cacheControl, xGenerator;
+        let date, cacheControl, xCache;
 
         date = new Date(httpResp.headers.get("Date")).toUTCString();
-        cacheControl = "max-age="+LocalStorageResponse.ttl;
-        xGenerator = "NewsClient";
-
-        headers = {
-            "Date": date,
-            "Cache-Control": cacheControl,
-            "X-Generator": xGenerator
-        };
+        cacheControl = "public, max-age="+LocalStorageResponse.ttl;
+        xCache = "local-storage-cache";
 
         headers = httpResp.headers;
 
-        body = httpResp.getBody();
+        headers.append("Date", date);
+        headers.append("Cache-Control", cacheControl);
+        headers.append("X-Cache", xCache);
 
-
-
-        let resp = new Response(httpResp.getBody(), {headers: headers});l
-
+        return new LocalStorageResponse(httpResp.body, headers);
     }
 
 }
