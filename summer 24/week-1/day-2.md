@@ -15,8 +15,8 @@ Draft
   * Midterm Review / Evaluation items (_these are items that will be included as part of your midterm and final evaluations_)
     * Review and memorize the two main method signatures for <code>fetch()</code> from MDN Fetch API.
     * Review and memorize the the constructor signatures for <code>Request</code> and <code>Response</code>.
-    * Understand the relationship between <code>Request</code>, <code>Response</code> and <code>fetch()</code>.
-    * Understand the benefits of View components in the context of MVC.
+    * Understand _and_ be able to articulate the relationship between <code>Request</code>, <code>Response</code> and <code>fetch()</code>.
+    * Understand _and_ be able to articulate the benefits of View components in the context of MVC.
   * [Trung](https://github.com/tnguyen-win/CS233JS-05-weather-template/blob/refactor/src/js/weatherParsing.js) - Model code still needed for DayForecast.
   * [Katelyn](https://github.com/SullivanKE/JS233-TermProject-News) - Refactoring of Modal* code (there should only be one modal, invoked from the event handler).
   * Implement JSX components in place of JavaScript template literals.
