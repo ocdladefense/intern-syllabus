@@ -24,6 +24,7 @@ Draft
     * Install <code>@ocdla/view</code> as a dependency for your project.
     * Install other NPM dependencies.
     * Add configuration code to your <code>webpack.configs.js</code> file's <code>rules</code> section (see below).
+    * Add transpiler _pragma_ and associated imports to each JavaScript file where you will define or consume JSX components (see below).
 * 2:50 - 3:00 - Learning Objectives ideas
 * 3:00pm - Meeting concludes.
 ## <code>Webpack.config.js</code> additions:
@@ -45,3 +46,12 @@ module: {
 }
 ...
 ```
+## Transpiler pragma and associated imports
+_Note: the pragma is the <code>/** @jsx vNode */</code> comment and is required.
+```javascript
+/** @jsx vNode */
+import { vNode, View } from "@ocdla/view";
+```
+
+
+
