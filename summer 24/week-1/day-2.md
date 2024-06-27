@@ -22,8 +22,8 @@ Draft
   * Implement JSX components in place of JavaScript template literals.
     * Branch again to create a <code>jsx</code> branch for your repositories.
     * Install <code>@ocdla/view</code> as a dependency for your project.
-    * Install other NPM dependencies.
-    * Add configuration code to your <code>webpack.configs.js</code> file's <code>rules</code> section (see below).
+    * Install other NPM dependencies: <code>babel-loader</code>, <code>@babel/present-env</code>, <code>@babel/preset-react</code>.
+    * Add configuration code to your <code>webpack.configs.js</code> file's <code>module.rules</code> section (see below).
     * Add transpiler _pragma_ and associated imports to each JavaScript file where you will define or consume JSX components (see below).
 * 2:50 - 3:00 - Learning Objectives ideas
 * 3:00pm - Meeting concludes
