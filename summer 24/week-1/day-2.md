@@ -18,7 +18,7 @@ Draft
     * Understand the relationship between <code>Request</code>, <code>Response</code> and <code>fetch()</code>.
     * Understand the benefits of View components in the context of MVC.
   * [Trung](https://github.com/tnguyen-win/CS233JS-05-weather-template/blob/refactor/src/js/weatherParsing.js) - Model code still needed for DayForecast.
-  * Katelyn - Refactoring of Modal* code (there should only be one modal, invoked from the event handler)
+  * [Katelyn](https://github.com/SullivanKE/JS233-TermProject-News) - Refactoring of Modal* code (there should only be one modal, invoked from the event handler).
   * Implement JSX components in place of JavaScript template literals.
     * Branch again to create a <code>jsx</code> branch for your repositories.
     * Install <code>@ocdla/view</code> as a dependency for your project.
