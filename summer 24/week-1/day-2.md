@@ -25,6 +25,7 @@ Draft
     * Install other NPM dependencies.
     * Add configuration code to your <code>webpack.configs.js</code> file's <code>rules</code> section (see below).
 * 2:50 - 3:00 - Learning Objectives ideas
+* 3:00pm - Meeting concludes.
 ## <code>Webpack.config.js</code> additions:
 ```javascript
 ...
