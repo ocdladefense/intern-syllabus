@@ -9,6 +9,8 @@ Draft
 * 2pm - Meeting start, questions
 * 2:15 - 2:30 - Katelyn, code walk through, NewsApp
   * Implementation of HttpClient + LocalStorageCache
+  * Event delegation for <code>click</code> handlers for viewing article details
+  * Event delegation for <code>click</code> handlers for selecting favorites
 * 2:30 - 2:45 - Trung, code walk through, WeatherApp
   * Implementation of DayForecast _model_, i.e., <code>DayForecast.js</code>
 * 2:45 - 2:50 - Review task lists for Thursday - Tuesday, 7/2
