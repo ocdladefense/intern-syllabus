@@ -101,6 +101,11 @@ function MyComponent() {
   );
 }  
 
+
+/*
+{type:"Fragment",props:null,children: [{type:"h1", props:null, children: ["Hello, world!"]}, {type:"Fragment", props:null, children: [{type:"span", props:null, children:["hello"]}, {type:"span", props:null, children:["goodbye"]}]}, {type:"button", props:{onclick: () => setCount(count + 1)}, children:["Click me:" + count]}]}
+*/
+
 React.render(MyComponent, "#main");
 
 /*
