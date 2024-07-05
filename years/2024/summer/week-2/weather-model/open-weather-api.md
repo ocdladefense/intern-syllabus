@@ -10,6 +10,11 @@ LON = -123.2620
 APPID = 3b023cc4b7da42b81cd324266c384075
 ```
 
+### List of weather conditions, condition codes, and their related icons
+Here is the link to the list of [possible weather conditions](https://openweathermap.org/weather-conditions).  _Remember that icons have both night/day alternates.  Day-appropriate icons are suffixed with "d"; night-appropriate icons are suffixed with "n".  These correspond to the <code>sys.pod</code> key in each data sample.  The complete list of codes and icons is [available in spreadsheet form](https://docs.google.com/spreadsheets/d/1Hl0TjF_XoKipeREXD6T0VhGfumNSSWBIqGMpy1tSCZM/edit?usp=sharing).
+
+
+
 ### Get the current weather
 Access the data [here](https://api.openweathermap.org/data/2.5/weather?lat=44.5646&lon=-123.26&units=imperial&lang=en&appid=3b023cc4b7da42b81cd324266c384075) to get the current weather in Corvallis, OR.
 ```javascript
@@ -50,3 +55,13 @@ let utcOffset = timezone / 3600;
 options.timeZone = "-04";//data.city.timezone;
 d.toLocaleString('en-US', options);
 ```
+
+
+```javascript
+let icons = new Map();
+icons.put(500, {desc: "rain", icon: "10d"});
+icons.put(200, {desc: "thunderstorm", icon: "11d"});
+icons.put(800, {desc: "clear sky", icon: "15d"});
+```
+
+

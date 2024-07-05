@@ -17,6 +17,8 @@
 Modal dialog
 : A dialog that appears on top of the main content and moves the system into a special mode requiring user interaction. This dialog disables the main content until the user explicitly interacts with the modal dialog.
 
+
+
 ```javascript
 async function start() {
 
@@ -98,20 +100,6 @@ https://uniqname.medium.com/why-i-avoid-async-await-7be98014b73e
 * Web Workers
 * Service Workers
 * Event Loop
-
-## JavaScript Service Workers
-
-JavaScript Service Workers are called that because they act like dedicated "workers" in the background, providing "services" to your web application.
-Here's why the name fits:
-Workers:
-
-Like other types of web workers, service workers run on a separate thread from the main JavaScript execution thread. This allows them to perform tasks in the background without blocking the user interface, making your app smoother and more responsive.
-
-Services:
-Service workers provide a variety of services to your web app, such as:
-
-Caching: They can intercept network requests and cache assets, allowing your app to work offline or load faster.
-
-Push notifications: They can receive push messages from a server and display notifications to the user, even when the app is not actively being used.
-Background sync: They can sync data in the background, ensuring that data is updated even if the user loses connectivity.
-In summary, the name "Service Worker" reflects their role as background processes that provide essential services to improve the functionality and performance of web applications.
+* [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+* [The JavaScript Execution Model](https://javascript.plainenglish.io/the-javascript-execution-model-part-2-467c7b9b42fa)
+* https://www.encora.com/insights/javascript-settimeout-and-promise-under-the-hood
