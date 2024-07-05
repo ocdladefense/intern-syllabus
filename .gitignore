@@ -1,3 +1,12 @@
+
+# Don't track node_modules.
 **node_modules**
 
+
+# Don't track MacOS files.
 **.DS_Store**
+
+
+# Don't track local configuration variables.
+.gitconfig
+
