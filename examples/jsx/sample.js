@@ -1,6 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 
-import { View, vNode, VirtualDom } from "@ocdla/view";
+import { View, vNode, VirtualDom } from "../../dev_modules/@ocdla/view/view.js";
 // import {createElement, render} from "@ocdla/view";
 
 const React = (function () {
@@ -93,15 +93,19 @@ function MyComponent() {
   */
   console.log("count", count);
   return (
-    <>
+    <Hello>
       <h1>{"Hello, world!"}</h1>
-      <><span>hello</span><span>goodbye</span></>
+        <span>hello</span>
+        <span>goodbye</span>
       <button onclick={() => setCount(count + 1)}>{"Click me:" + count}</button>
-    </>
+    </Hello>
   );
 }  
 
 
+function Hello(props) {
+  return <div><h1>I said hello! </h1>{props.children}</div>;
+}
 /*
 {type:"Fragment",props:null,children: [{type:"h1", props:null, children: ["Hello, world!"]}, {type:"Fragment", props:null, children: [{type:"span", props:null, children:["hello"]}, {type:"span", props:null, children:["goodbye"]}]}, {type:"button", props:{onclick: () => setCount(count + 1)}, children:["Click me:" + count]}]}
 */

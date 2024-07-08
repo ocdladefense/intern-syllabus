@@ -1,6 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 
-import { View, vNode, VirtualDom } from "@ocdla/view";
+import { View, vNode, VirtualDom } from "../../dev_modules/@ocdla/view/view.js";
 // import {createElement, render} from "@ocdla/view";
 
 const React = function () {
@@ -84,10 +84,17 @@ function MyComponent() {
   };
   */
   console.log("count", count);
-  return vNode("Fragment", null, vNode("h1", null, "Hello, world!"), vNode("Fragment", null, vNode("span", null, "hello"), vNode("span", null, "goodbye")), vNode("button", {
+  return vNode(Hello, null, vNode("h1", null, "Hello, world!"), vNode("span", null, "hello"), vNode("span", null, "goodbye"), vNode("button", {
     onclick: () => setCount(count + 1)
   }, "Click me:" + count));
 }
+function Hello(props) {
+  return vNode("div", null, vNode("h1", null, "I said hello! "), props.children);
+}
+/*
+{type:"Fragment",props:null,children: [{type:"h1", props:null, children: ["Hello, world!"]}, {type:"Fragment", props:null, children: [{type:"span", props:null, children:["hello"]}, {type:"span", props:null, children:["goodbye"]}]}, {type:"button", props:{onclick: () => setCount(count + 1)}, children:["Click me:" + count]}]}
+*/
+
 React.render(MyComponent, "#main");
 
 /*

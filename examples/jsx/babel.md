@@ -1,0 +1,1 @@
+npx babel examples/jsx/sample.js --out-file examples/jsx/script-compiled.js --source-maps
