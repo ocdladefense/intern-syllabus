@@ -1,6 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 
-import { View, vNode, VirtualDom } from "../../dev_modules/@ocdla/view/view.js";
+import { View, vNode, VirtualDom } from "../../node_modules/@ocdla/view/view.js";
 // import {createElement, render} from "@ocdla/view";
 
 const React = (function () {
