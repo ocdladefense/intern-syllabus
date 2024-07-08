@@ -5,3 +5,4 @@ JSX is an XML-like syntax extension to ECMAScript without any defined semantics.
 _from [https://facebook.github.io/jsx/](https://facebook.github.io/jsx/)
 
 ### ... and how does it relate to JavaScript?
+JSX is an extension to the ECMAScript language enabling the meaningful use of XML entities within JavaScript definition and execution contexts.
