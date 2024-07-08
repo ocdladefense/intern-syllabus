@@ -4,7 +4,7 @@
 
 
 # Don't track MacOS files.
-# .DS_Store**
+.DS_Store
 
 
 # Don't track local configuration variables.
