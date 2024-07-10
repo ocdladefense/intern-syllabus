@@ -1,4 +1,13 @@
 
+
+
+# OpenWeather API
+
+## General Information
+* [Student registration](https://home.openweathermap.org/students)
+* [Student offer](https://openweathermap.org/price#offers)
+* [FAQ](https://openweathermap.org/faq)
+
 ## Examples
 * https://www.aerisweather.com/weather/local/us/or/salem
 * https://forecastadvisor.com/Oregon/Corvallis/97330/
