@@ -1,3 +1,13 @@
+# Service Workers
+
+
+## Caching
+Web applications use both _same-origin_ and _cross-origin_ assets.
+
+Web applications that use service workers can cache these assets.  It is a common practice to cache these assets on installation.
+
+Web applications can register <code>fetch</code> event handlers to bypass the network and serve assets from the cache using the <code>respondWith</code> method.
+
 
 
 
