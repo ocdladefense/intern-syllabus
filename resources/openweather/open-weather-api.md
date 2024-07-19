@@ -28,8 +28,11 @@ APPID = 3b023cc4b7da42b81cd324266c384075
 http://api.openweathermap.org/geo/1.0/zip?zip=97330,US&appid=3b023cc4b7da42b81cd324266c384075
 ```
 
-
-
+### Reverse Geolocation
+_The response contains the city, state and country_.
+```javascript
+http://api.openweathermap.org/geo/1.0/reverse?lat=44.5646&lon=-123.26&units=imperial&lang=en&appid=3b023cc4b7da42b81cd324266c384075
+```
 
 ### List of weather conditions, condition codes, and their related icons
 Here is the link to the list of [possible weather conditions](https://openweathermap.org/weather-conditions).  _Remember that icons have both night/day alternates.  Day-appropriate icons are suffixed with "d"; night-appropriate icons are suffixed with "n".  These correspond to the <code>sys.pod</code> key in each data sample.  The complete list of codes and icons is [available in spreadsheet form](https://docs.google.com/spreadsheets/d/1Hl0TjF_XoKipeREXD6T0VhGfumNSSWBIqGMpy1tSCZM/edit?usp=sharing).
