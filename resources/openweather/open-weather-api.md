@@ -19,6 +19,18 @@ LON = -123.2620
 APPID = 3b023cc4b7da42b81cd324266c384075
 ```
 
+>
+>_Note_: You can force error messages by deliberately substituting invalid data into the below URLS.
+>
+
+### Geo by zip code
+```javascript
+http://api.openweathermap.org/geo/1.0/zip?zip=97330,US&appid=3b023cc4b7da42b81cd324266c384075
+```
+
+
+
+
 ### List of weather conditions, condition codes, and their related icons
 Here is the link to the list of [possible weather conditions](https://openweathermap.org/weather-conditions).  _Remember that icons have both night/day alternates.  Day-appropriate icons are suffixed with "d"; night-appropriate icons are suffixed with "n".  These correspond to the <code>sys.pod</code> key in each data sample.  The complete list of codes and icons is [available in spreadsheet form](https://docs.google.com/spreadsheets/d/1Hl0TjF_XoKipeREXD6T0VhGfumNSSWBIqGMpy1tSCZM/edit?usp=sharing).
 
@@ -43,10 +55,14 @@ https://api.openweathermap.org/data/2.5/forecast?q=Corvallis,OR,US&mode=json&uni
 ```
 
 ### Forecast by zip code
-Access the data [here](https://api.openweathermap.org/data/2.5/forecast?q=Corvallis,OR,US&mode=json&units=imperial&appid=3b023cc4b7da42b81cd324266c384075)
+Access the data [here](https://api.openweathermap.org/data/2.5/forecast?zip=97401,US&mode=json&units=imperial&appid=3b023cc4b7da42b81cd324266c384075)
 ```javascript
 https://api.openweathermap.org/data/2.5/forecast?zip=97401,US&mode=json&units=imperial&appid=3b023cc4b7da42b81cd324266c384075
 ```
+
+
+
+>_Note_: You can force error messages by deliberately substituting invalid data into the above URLS.
 
 
 ### Getting the ISO Date from a Unix timestamp
