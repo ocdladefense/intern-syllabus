@@ -7,4 +7,4 @@
 5. Create new gh-pages branch.
 6. State new gh-pages branch as GitHub Pages workflow destination in repository settings on GitHub.
 7. Generate new authorization token (classic or fine-grained).
-8. Setup GitHub secret(s) in repository settings on GitHub using our token. (edited) 
+8. Setup GitHub secret(s) in repository settings on GitHub using our token.
